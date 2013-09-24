@@ -196,7 +196,8 @@
     }
     
     [(UILabel *)(view.subviews)[0] setText:[isa countryNames][row]];
-    UIImage *flag = [UIImage imageNamed:[[isa countryCodes][row] stringByAppendingPathExtension:@"png"]];
+    NSString * imageName = [NSString stringWithFormat:@"cp_%@", [isa countryCodes][row]];
+    UIImage *flag = [UIImage imageNamed:imageName];
     [(UIImageView *)(view.subviews)[1] setImage:flag];
     
     return view;
